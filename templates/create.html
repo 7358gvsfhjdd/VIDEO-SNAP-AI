@@ -17,8 +17,8 @@
                 <div class="fallback">
                     <div id="fileInputs">
                         <div class="file-input-group">
-                            <input name="file1" type="file" class="file-input" />
-                            <input name ="uuid" tyope ="hdden" valu ="{{myid}}"
+                            <input name="file1" type="file" class="file-input" title="Upload video file" />
+                            <input name="uuid" type="hidden" value="{{myid}}" />
                             <button type="button" class="remove-file-btn" onclick="removeFileInput(this)" disabled>×</button>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
         const newFileInput = document.createElement('div');
         newFileInput.className = 'file-input-group';
         newFileInput.innerHTML = `
-            <input name="file${fileCounter}" type="file" class="file-input" />
+            <input name="file${fileCounter}" type="file" class="file-input" title="Upload video file" />
             <button type="button" class="remove-file-btn" onclick="removeFileInput(this)">×</button>
         `;
         fileInputs.appendChild(newFileInput);
